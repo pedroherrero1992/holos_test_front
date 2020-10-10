@@ -7,7 +7,7 @@ Antes de comenzar muchas gracias por la oportunidad,
 
 El test se separa en 2 partes Front y Back
 
-Requisitos
+Requisitos  
 Mongoo DB   
 Node.js   
 Angular 9+ (no estoy seguro si con el comando npm install ya lo instalaba)  
