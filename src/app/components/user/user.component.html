@@ -1,0 +1,111 @@
+<br ><br><br>
+
+
+<h3 style="color: rgb(247, 61, 61);">Holos Test</h3>
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Crear Usuario</a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Administrar Usuario</button>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Tutorial</button>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample4" aria-expanded="false" aria-controls="multiCollapseExample4">¿Por Qué Contratarme?</button>
+</p>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse show" id="multiCollapseExample1">
+      <div class="card card-body" style="background-color: rgb(148, 135, 135);">
+
+        <!--form-->
+        <form class="col-sm" (ngSubmit)="crear_evt(loginForm.value)" [formGroup]="loginForm">
+
+          <label for="user">User</label>
+          <input type="text" formControlName="user">
+          <br>
+    
+          <label for="password">Password</label>
+          <input type="password" formControlName="password">
+          <br>
+    
+          <input type="submit" class="btn btn-primary" [disabled]="!loginForm.valid" value="Crear">
+    
+    
+         </form>
+      
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="collapse multi-collapse show" id="multiCollapseExample2">
+      <div class="card card-body" style="background-color: rgb(148, 135, 135);">
+
+
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">User</th>
+              <th scope="col">Password</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+      
+      
+              <tr *ngFor="let datos of this.usuarios_array | paginate: { itemsPerPage: 5, currentPage: pageActual }; let i = index  ">
+              <th scope="row">{{i}}</th>
+              <td>{{datos.name}}</td>
+              <td>{{datos.otra}}</td>
+              
+              
+             
+              <td><button class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" (click)="ampliar(datos._id)">...</button></td>
+              <td><button class="btn btn-dark" data-toggle="modal" data-target="#exampleModal" (click)="borrar(datos._id)">X</button></td>
+            </tr>
+      
+          </tbody>
+        </table>
+      <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+      
+     
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<br>
+<div class="row">
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample3">
+      <div class="card card-body" style="background-color: transparent;">
+       
+        <p><iframe width="500" height="315" [src]="url_video" frameborder="0" allowfullscreen ></iframe></p>
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample4">
+      <div class="card card-body" style="background-color: transparent">
+       
+        <p><iframe width="500" height="400" [src]="url_geniali" frameborder="0" allowfullscreen ></iframe></p>
+       <p class="text-center"> <a href="https://view.genial.ly/5f80bdbbddd5b90cf23a6215/" target="_blank">Ver más...</a></p>
+    
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='fondo container'>
+ 
+
+
+
+
+<br>
+
+
+
+
+
+ 
+</div>

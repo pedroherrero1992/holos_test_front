@@ -1,0 +1,25 @@
+.fondo {
+
+
+    /*overflow: hidden !important;*/
+    background-color: #333;
+    /*position: fixed !important;*/
+    /* Set the navbar to fixed position */
+    /*top: 0 !important;*/
+    /* Position the navbar at the top of the page */
+    /*width: 100% !important;*/
+    /* Full width */
+    color: antiquewhite;
+  }
+  
+  label{
+    display: inline-block;
+    width: 180px;
+  }
+  
+  
+  .centroRegistro{
+    position:relative;
+    left:20%;
+  
+  }

@@ -1,0 +1,36 @@
+
+
+<br><br>
+<br>
+<h3 style="color: rgb(247, 61, 61);">Holos Test</h3>
+
+<div class="text-center">
+    
+    <p style="color: blanchedalmond;">Para Mutante ej : ATGCGA-CAGTGC-TTATGT-AGAAGG-CCCCTA-TCACTG</p>
+    <p style="color: blanchedalmond;"> Para No Mutante ej : ATGCGA-CAGTGC-TTATTT-AGACGG-GCGTCA-TCACTG </p>
+    <p  style="color: blanchedalmond;"> El patron de entrada del formulario solo acepta ACTG en mayuscula, estas se agrupan de a 6 y se separan por - un total de 6 veces</p>
+    <form class="col-sm" (ngSubmit)="check_mutant(form_mutant.value)" [formGroup]="form_mutant">
+        
+        <label for="dna" style="color: blanchedalmond; margin: 10px" >DNA </label>
+        <input type="text" formControlName="dna" pattern="[ACTG]{6,6}-[ACTG]{6,6}-[ACTG]{6,6}-[ACTG]{6,6}-[ACTG]{6,6}-[ACTG]{6,6}"  style="margin: 10px">
+        
+        
+        
+        
+        
+        <input type="submit" class="btn btn-primary" [disabled]="!form_mutant.valid" value="CHECK">
+        
+        
+    </form>
+    
+    <p style="color: blanchedalmond;"> Salida :  {{salida_mutant.status}} {{salida_mutant.save}}</p>
+    
+</div>
+    
+    <div class="text-center">
+        <h2 style="color: blanchedalmond;">STATS</h2>
+   <button class='btn btn-primary' (click)="getStats()"> stats</button>
+   
+   <p style="color: blanchedalmond;"> Stats: <br> count_mutant_dna: {{salida_stats.count_mutant_dna}} <br> count_human_dna:{{salida_stats.count_human_dna}} <br> ratio: {{salida_stats.ratio}} </p>
+
+   </div>
