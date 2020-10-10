@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
-holos_test
+
 Antes de comenzar muchas gracias por la oportunidad,
 
 El test se separa en 2 partes Front y Back
