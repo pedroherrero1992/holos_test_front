@@ -17,7 +17,8 @@ esto instalará todas las dependencias que necesita el proyecto para correr
 
 el back debe estar en el puerto 3000 y el front en el puerto 4200
 
-El front contiene un pequeño tutorial en video para mostrar la funcionalidad en la parte de usuarios nada del otro mundo. levantar el back
+El front contiene un pequeño tutorial en video para mostrar la funcionalidad en la parte de usuarios nada del otro mundo. 
+para levantar el back correr el comando en la carpeta del back
 
 $npx nodemon conn.js
 
