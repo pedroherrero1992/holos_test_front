@@ -2,26 +2,29 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
-## Development server
+holos_test
+Antes de comenzar muchas gracias por la oportunidad,
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+El test se separa en 2 partes Front y Back
 
-## Code scaffolding
+Requisitos Mongoo DB Node.js Angular 9+ (no estoy seguro si con el comando npm install ya lo instalaba)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Bien para comenzar hay que descargar el repo y dentro de cada carpeta abrir consola y introducir el comando
 
-## Build
+$npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+esto instalará todas las dependencias que necesita el proyecto para correr
 
-## Running unit tests
+el back debe estar en el puerto 3000 y el front en el puerto 4200
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+El front contiene un pequeño tutorial en video para mostrar la funcionalidad en la parte de usuarios nada del otro mundo. levantar el back
 
-## Running end-to-end tests
+$npx nodemon conn.js
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+la api del back funciona con con las siguientes rutas:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+POST http://localhost:3000/mutant/:cadena_dna
+GET http://localhost:3000/stats
+GET http://localhost:3000/getUsersList
+POST http://localhost:3000/create/:cadena_user&&&pass
+POST http://localhost:3000/delete/:id_user
